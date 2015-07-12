@@ -1,0 +1,15 @@
+{
+  "name": "ccount",
+  "version": "0.0.0",
+  "description": "Count characters",
+  "license": "MIT",
+  "keywords": [
+    "character",
+    "count",
+    "char"
+  ],
+  "repository": "wooorm/ccount",
+  "scripts": [
+    "index.js"
+  ]
+}
