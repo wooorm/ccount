@@ -1,37 +1,44 @@
+/**
+ * @author Titus Wormer
+ * @copyright 2015 Titus Wormer
+ * @license MIT
+ * @module ccount
+ * @fileoverview Test suite for `ccount`.
+ */
+
 'use strict';
 
-/* eslint-env mocha */
-
-/*
- * Dependencies.
- */
-
+/* Dependencies. */
+var test = require('tape');
 var ccount = require('./');
-var assert = require('assert');
 
-/*
- * Tests.
- */
+/* Tests. */
+test('ccount(value, character)', function (t) {
+  t.equal(ccount(true, 't'), 1, 'should coerce to string');
 
-describe('ccount(value, character)', function () {
-    it('should coerce to string', function () {
-        assert.equal(ccount(true, 't'), 1);
-    });
+  t.throws(
+    function () {
+      ccount(true, 0);
+    },
+    /Expected character/,
+    'should throw when character is invalid (#1)'
+  );
 
-    it('should throw when character is invalid', function () {
-        assert.throws(function () {
-            ccount(true, 0);
-        }, /Expected character/);
+  t.throws(
+    function () {
+      ccount(true, 'incorrect');
+    },
+    /Expected character/,
+    'should throw when character is invalid (#2)'
+  );
 
-        assert.throws(function () {
-            ccount(true, 'incorrect');
-        }, /Expected character/);
-    });
+  t.test('should work', function (st) {
+    st.equal(ccount('', 'f'), 0);
+    st.equal(ccount('foo', 'o'), 2);
+    st.equal(ccount('fo fooo fo', 'o'), 5);
+    st.equal(ccount('ooo', 'o'), 3);
+    st.end();
+  });
 
-    it('should work', function () {
-        assert.equal(ccount('', 'f'), 0);
-        assert.equal(ccount('foo', 'o'), 2);
-        assert.equal(ccount('fo fooo fo', 'o'), 5);
-        assert.equal(ccount('ooo', 'o'), 3);
-    });
+  t.end();
 });

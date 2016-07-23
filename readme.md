@@ -1,19 +1,16 @@
-# ccount [![Build Status](https://img.shields.io/travis/wooorm/ccount.svg?style=flat)](https://travis-ci.org/wooorm/ccount) [![Coverage Status](https://img.shields.io/coveralls/wooorm/ccount.svg?style=flat)](https://coveralls.io/r/wooorm/ccount?branch=master)
+# ccount [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+
+<!--lint disable heading-increment list-item-spacing-->
 
 Count characters.
 
 ## Installation
 
-[npm](https://docs.npmjs.com/cli/install):
+[npm][npm-install]:
 
 ```bash
 npm install ccount
 ```
-
-**ccount** is also available for [bower](http://bower.io/#install-packages),
-[component](https://github.com/componentjs/component), [duo](http://duojs.org/#getting-started),
-and for AMD, CommonJS, and globals ([uncompressed](ccount.js) and
-[compressed](ccount.min.js)).
 
 ## Usage
 
@@ -26,21 +23,35 @@ ccount('foo(bar(baz)', ')') // 1
 
 ## API
 
-### ccount(value, character)
+### `ccount(value, character)`
 
 Get the total count of `character` in `value`.
 
-Parameters:
+###### Parameters
 
 *   `value` (`string`) — Content, coerced to string.
 *   `character` (`string`) — Single character to look for.
 
-Returns: `number` — Number of times `character` occurred in `value`.
+###### Returns
 
-Throws:
-
-*   `Error` — when `character` is not a single character string.
+`number` — Number of times `character` occurred in `value`.
 
 ## License
 
-[MIT](LICENSE) @ [Titus Wormer](http://wooorm.com)
+[MIT][license] © [Titus Wormer][author]
+
+<!-- Definitions -->
+
+[travis-badge]: https://img.shields.io/travis/wooorm/ccount.svg
+
+[travis]: https://travis-ci.org/wooorm/ccount
+
+[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/ccount.svg
+
+[codecov]: https://codecov.io/github/wooorm/ccount
+
+[npm-install]: https://docs.npmjs.com/cli/install
+
+[license]: LICENSE
+
+[author]: http://wooorm.com

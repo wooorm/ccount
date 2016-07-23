@@ -1,9 +1,25 @@
 language: node_js
-script: npm run-script test-travis
 node_js:
-- '0.10'
 - '0.11'
 - '0.12'
-- iojs
-sudo: false
-after_script: npm install coveralls@2.10.0 && cat ./coverage/lcov.info | coveralls
+- '4.0'
+- '5.0'
+- '6.0'
+after_success: bash <(curl -s https://codecov.io/bash)
+deploy:
+  - provider: npm
+    email: tituswormer@gmail.com
+    api_key:
+      secure: tSTuTbI6mpnQbm2/HxRXatY0uZwpQtJSOYRzQEsVnrcToPkE1nzNUF1rxKeSe3/GKiPyM692NwcIA0KAFkq+G7Lo5/dBn8IrtDONgqkklktk9V3wrVT5KwD09X3EvW9SnI5JVpcxMSvrKeBn47TJ82MtSIUZ0J8bg2DUf42cKEIRhq+9KYOqZ02znSFifJsLSOT/sXBTpgzW5XQuolaLhcV+5NBSFzShwmnMsgKLG1FufPtetr4x/dEHdjp8OoU+cLllw+JLSjAYG5ro3PoNtxw62yO+rGUFG8qhhd9P96dqypqnIK5xvj+mlFwffiPZFxRYfzdWecJHuRbiLK81faUkpyGgppMW1AvfVsQMm2UPb/LojeCE5xqZSv0h0TZRKoiOg7afZV9ObmjvLFkXatFjllGeTRMn9g3/7ud0DHKKk37abQinJMSHZG8YcpxAbY1z+c39nnQkMdGev0fnedTBOG2onE/vzlXZSDQqlirtLBiH2Und0Kc1PqheKeh9WeOr3q34Dk8aYoyaMoQ7n7lndm0jjiecvUuOa2VP+0SlIMit/y1E6pEzsmGW2rY/YIQN3Ws7JSdZO1oqL5y5cuJwmJc98BMVVyzs56w8baLp0FFFGuiuuuMPZqNjdBRShfgkT5YjrknF3SbT0DSP9Tp7t79M+bXPHB26RyNUEt8=
+    on:
+      tags: true
+      node: '5.0'
+  - provider: releases
+    api_key:
+      secure: yMdEfjIxa7pOa1ufZdvKew03nD9JWHIOGC8fWAIsoYx22/cjLWWJMY9p1AOilPt4hMlZBbuSdsUWUuXrV3shTjdLNeQk/DqfEe2+hTAtOFYEnnanaA1ybSreVNjby0BFmHCZoJ6j/ICgvGfiCyHgrQfRR4ubQWGQW9cKmur0Ze/Wn4NYE2ULnCyJgbph9rJ8wkCLTnKo94FkaOF9H78Eslv/6XytojhLdoYyhK1zto33EKA7Sohugajk5BOeORihxbqFuz7THO/ASQkGYedeZRU+LoBEKcqXhuJIn9xUB/gRR+GQqODtTm2LnDyteSMs9WaoSp3aeCIaM3mpiE281sfas4Pi/VAI47T7OCbvp6S1Okx437zilknOiW9Sdwu9m1OSjTulEHCRz7aztjmVOXCqOAIUPXfxHaXwGsvOVPYh6PjX92kQGd3c8F2fXwiFU1S2TTTubDoa7kc9Ipoo5ulHpQ036FfZujlDNcCoqJHQCqXTUvw5WCeq89EM2sm+6rWnoriWULGRNh0gR/L7iuL0Dt+Lost+LVHldzDdf4NZAM7R5QkfVMrie6QHBzrNAHzDWdt2D3GjNJI/yy+XlK7UL2m5mUzbk+B7dJvBWoPNs0nCfO5ohdCt8CHiKhvVUtQQvCkb3nbMLTeKsC4xwqEVdg862KPpsrB4tp/WpnA=
+    file:
+      - "ccount.js"
+      - "ccount.min.js"
+    on:
+      tags: true
+      node: '6.0'

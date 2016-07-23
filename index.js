@@ -1,11 +1,15 @@
 /**
  * @author Titus Wormer
- * @copyright 2015 Titus Wormer. All rights reserved.
+ * @copyright 2015 Titus Wormer
+ * @license MIT
  * @module ccount
  * @fileoverview Count characters.
  */
 
 'use strict';
+
+/* Expose. */
+module.exports = ccount;
 
 /**
  * Count how many characters `character` occur in `value`.
@@ -22,28 +26,21 @@
  *   character.
  */
 function ccount(value, character) {
-    var index = -1;
-    var count = 0;
-    var length;
+  var count = 0;
+  var index;
 
-    value = String(value);
-    length = value.length;
+  value = String(value);
 
-    if (typeof character !== 'string' || character.length !== 1) {
-        throw new Error('Expected character');
-    }
+  if (typeof character !== 'string' || character.length !== 1) {
+    throw new Error('Expected character');
+  }
 
-    while (++index < length) {
-        if (value.charAt(index) === character) {
-            count++;
-        }
-    }
+  index = value.indexOf(character);
 
-    return count;
+  while (index !== -1) {
+    count++;
+    index = value.indexOf(character, index + 1);
+  }
+
+  return count;
 }
-
-/*
- * Expose.
- */
-
-module.exports = ccount;
