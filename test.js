@@ -1,11 +1,3 @@
-/**
- * @author Titus Wormer
- * @copyright 2015 Titus Wormer
- * @license MIT
- * @module ccount
- * @fileoverview Test suite for `ccount`.
- */
-
 'use strict';
 
 /* Dependencies. */
