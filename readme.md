@@ -1,7 +1,5 @@
 # ccount [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
 
-<!--lint disable heading-increment list-item-spacing-->
-
 Count characters.
 
 ## Installation
