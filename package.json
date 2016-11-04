@@ -8,14 +8,14 @@
     "count",
     "char"
   ],
-  "files": [
-    "index.js"
-  ],
   "repository": "https://github.com/wooorm/ccount",
   "bugs": "https://github.com/wooorm/ccount/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "files": [
+    "index.js"
   ],
   "dependencies": {},
   "devDependencies": {
