@@ -1,22 +1,7 @@
 'use strict';
 
-/* Expose. */
 module.exports = ccount;
 
-/**
- * Count how many characters `character` occur in `value`.
- *
- * @example
- *   ccount('foo(bar(baz)', '(') // 2
- *   ccount('foo(bar(baz)', ')') // 1
- *
- * @param {string} value - Content, coerced to string.
- * @param {string} character - Single character to look
- *   for.
- * @return {number} - Count.
- * @throws {Error} - when `character` is not a single
- *   character.
- */
 function ccount(value, character) {
   var count = 0;
   var index;

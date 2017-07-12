@@ -1,10 +1,8 @@
 'use strict';
 
-/* Dependencies. */
 var test = require('tape');
 var ccount = require('./');
 
-/* Tests. */
 test('ccount(value, character)', function (t) {
   t.equal(ccount(true, 't'), 1, 'should coerce to string');
 
