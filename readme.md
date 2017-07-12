@@ -4,7 +4,7 @@ Count characters.
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install ccount
@@ -15,8 +15,8 @@ npm install ccount
 ```javascript
 var ccount = require('ccount');
 
-ccount('foo(bar(baz)', '(') // 2
-ccount('foo(bar(baz)', ')') // 1
+ccount('foo(bar(baz)', '(') //=> 2
+ccount('foo(bar(baz)', ')') //=> 1
 ```
 
 ## API
@@ -27,8 +27,8 @@ Get the total count of `character` in `value`.
 
 ###### Parameters
 
-*   `value` (`string`) — Content, coerced to string.
-*   `character` (`string`) — Single character to look for.
+*   `value` (`string`) — Content, coerced to string
+*   `character` (`string`) — Single character to look for
 
 ###### Returns
 
@@ -48,7 +48,7 @@ Get the total count of `character` in `value`.
 
 [codecov]: https://codecov.io/github/wooorm/ccount
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
