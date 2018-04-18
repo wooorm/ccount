@@ -13,10 +13,10 @@ npm install ccount
 ## Usage
 
 ```javascript
-var ccount = require('ccount');
+var ccount = require('ccount')
 
-ccount('foo(bar(baz)', '(') //=> 2
-ccount('foo(bar(baz)', ')') //=> 1
+ccount('foo(bar(baz)', '(') // => 2
+ccount('foo(bar(baz)', ')') // => 1
 ```
 
 ## API
