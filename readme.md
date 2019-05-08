@@ -52,4 +52,4 @@ Get the total count of `character` in `value`.
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
