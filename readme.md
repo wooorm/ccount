@@ -1,4 +1,9 @@
-# ccount [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# ccount
+
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 Count characters.
 
@@ -40,13 +45,21 @@ Get the total count of `character` in `value`.
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/ccount.svg
+[build-badge]: https://img.shields.io/travis/wooorm/ccount.svg
 
-[travis]: https://travis-ci.org/wooorm/ccount
+[build]: https://travis-ci.org/wooorm/ccount
 
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/ccount.svg
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/ccount.svg
 
-[codecov]: https://codecov.io/github/wooorm/ccount
+[coverage]: https://codecov.io/github/wooorm/ccount
+
+[downloads-badge]: https://img.shields.io/npm/dm/ccount.svg
+
+[downloads]: https://www.npmjs.com/package/ccount
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/ccount.svg
+
+[size]: https://bundlephobia.com/result?p=ccount
 
 [npm]: https://docs.npmjs.com/cli/install
 
