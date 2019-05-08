@@ -1,15 +1,15 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 after_script: bash <(curl -s https://codecov.io/bash)
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: yMdEfjIxa7pOa1ufZdvKew03nD9JWHIOGC8fWAIsoYx22/cjLWWJMY9p1AOilPt4hMlZBbuSdsUWUuXrV3shTjdLNeQk/DqfEe2+hTAtOFYEnnanaA1ybSreVNjby0BFmHCZoJ6j/ICgvGfiCyHgrQfRR4ubQWGQW9cKmur0Ze/Wn4NYE2ULnCyJgbph9rJ8wkCLTnKo94FkaOF9H78Eslv/6XytojhLdoYyhK1zto33EKA7Sohugajk5BOeORihxbqFuz7THO/ASQkGYedeZRU+LoBEKcqXhuJIn9xUB/gRR+GQqODtTm2LnDyteSMs9WaoSp3aeCIaM3mpiE281sfas4Pi/VAI47T7OCbvp6S1Okx437zilknOiW9Sdwu9m1OSjTulEHCRz7aztjmVOXCqOAIUPXfxHaXwGsvOVPYh6PjX92kQGd3c8F2fXwiFU1S2TTTubDoa7kc9Ipoo5ulHpQ036FfZujlDNcCoqJHQCqXTUvw5WCeq89EM2sm+6rWnoriWULGRNh0gR/L7iuL0Dt+Lost+LVHldzDdf4NZAM7R5QkfVMrie6QHBzrNAHzDWdt2D3GjNJI/yy+XlK7UL2m5mUzbk+B7dJvBWoPNs0nCfO5ohdCt8CHiKhvVUtQQvCkb3nbMLTeKsC4xwqEVdg862KPpsrB4tp/WpnA=
+    secure: vTFEgx9DxlcGYQ2ROD8Ltesgeuk5T8gnUjZm1kqZHkYyLJRJ1p5uXz9lfCRFxp2+AxA0mzuMxYN5Sp/qqvtlElR8gIqPRXqbookxH17oxWlC6WLvsJ5YhwkjCa+j3VCD3603ra09F6QTF4x3B2h2oDBOJ2qa+CU8N7TxHokdaYAKvIOW2qRl8w/iCvNmRIKBfAyWf1LcrguatJwcJVz0hG1+8jqkzf8Fe4jebtRc2PIvxduuFu8yIcO4ttToqpistrx2vjH6h7X6Mr6AjIZLUjXEfyH/ktEZK0rIkDRYIVwJEqqqgqZIvRPomUKo1njWkrxWS6xaHJ3vml9g8u4pyOv5VUFIZC0XA8U1tQqTxdnpPKtFYf081XdC2dH2i2T+ChZjTa3Yr+AsbnTXFUEmtlBYY0hxXB8OJ90BybKnhHrRlENtKJkMK4CA0UshJht+jvzxPOuxnoxd6dMBIH08985p5Eh5ekrJipAQbwoVlQmABGQySs8Jql2Wtt/PjUJsfZKbnDQqstbhfEfGEZCKuJtGcIBrhpEIvXRaajakbiWUERBU1RETG/FxjqJbaGQmogOc9gBPZiGzZ0Ug7IAsds4wyeMTZn1MS6s7vNpbI9htT8f4Z5257mQa//iQ1eVTAESZ5Dbli2N/4/KH3t0FBmtKwz5kDmeRRhXE7y8xZ7E=
   file:
-    - "ccount.js"
-    - "ccount.min.js"
+    - 'ccount.js'
+    - 'ccount.min.js'
   on:
     tags: true
