@@ -7,7 +7,7 @@ function ccount(source, character) {
   var count = 0
   var index
 
-  if (typeof character !== 'string' || character.length !== 1) {
+  if (typeof character !== 'string') {
     throw new Error('Expected character')
   }
 
@@ -15,7 +15,7 @@ function ccount(source, character) {
 
   while (index !== -1) {
     count++
-    index = value.indexOf(character, index + 1)
+    index = value.indexOf(character, index + character.length)
   }
 
   return count

@@ -59,7 +59,10 @@
     "esnext": false,
     "ignores": [
       "ccount.js"
-    ]
+    ],
+    "rules": {
+      "unicorn/prefer-type-error": "off"
+    }
   },
   "nyc": {
     "check-coverage": true,

@@ -14,19 +14,12 @@ test('ccount(value, character)', function (t) {
     'should throw when character is invalid (#1)'
   )
 
-  t.throws(
-    function () {
-      ccount(true, 'incorrect')
-    },
-    /Expected character/,
-    'should throw when character is invalid (#2)'
-  )
-
   t.test('should work', function (st) {
     st.equal(ccount('', 'f'), 0)
     st.equal(ccount('foo', 'o'), 2)
     st.equal(ccount('fo fooo fo', 'o'), 5)
     st.equal(ccount('ooo', 'o'), 3)
+    st.equal(ccount('a🤔b🤔c', '🤔'), 2)
     st.end()
   })
 
