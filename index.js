@@ -2,8 +2,8 @@
 
 module.exports = ccount
 
-function ccount(value, character) {
-  var val = String(value)
+function ccount(source, character) {
+  var value = String(source)
   var count = 0
   var index
 
@@ -11,11 +11,11 @@ function ccount(value, character) {
     throw new Error('Expected character')
   }
 
-  index = val.indexOf(character)
+  index = value.indexOf(character)
 
   while (index !== -1) {
     count++
-    index = val.indexOf(character, index + 1)
+    index = value.indexOf(character, index + 1)
   }
 
   return count

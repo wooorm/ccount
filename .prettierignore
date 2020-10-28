@@ -1,3 +1,5 @@
 coverage/
 ccount.js
 ccount.min.js
+*.json
+*.md
