@@ -45,9 +45,9 @@ Get the total count of `character` in `value`.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/ccount.svg
+[build-badge]: https://github.com/wooorm/ccount/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/ccount
+[build]: https://github.com/wooorm/ccount/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/ccount.svg
 
