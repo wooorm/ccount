@@ -1,8 +1,4 @@
-'use strict'
-
-module.exports = ccount
-
-function ccount(source, character) {
+export function ccount(source, character) {
   var value = String(source)
   var count = 0
   var index

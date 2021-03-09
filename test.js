@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var ccount = require('.')
+import test from 'tape'
+import {ccount} from './index.js'
 
 test('ccount(value, character)', function (t) {
   t.equal(ccount(true, 't'), 1, 'should coerce to string')

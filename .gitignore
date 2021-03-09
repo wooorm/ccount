@@ -1,8 +1,5 @@
 .DS_Store
 *.log
-.nyc_output/
 coverage/
 node_modules/
-ccount.js
-ccount.min.js
 yarn.lock

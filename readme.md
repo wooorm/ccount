@@ -9,6 +9,9 @@ Count characters.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -18,13 +21,16 @@ npm install ccount
 ## Use
 
 ```js
-var ccount = require('ccount')
+import {ccount} from 'ccount'
 
 ccount('foo(bar(baz)', '(') // => 2
 ccount('foo(bar(baz)', ')') // => 1
 ```
 
 ## API
+
+This package exports the following identifiers: `ccount`.
+There is no default export.
 
 ### `ccount(value, character)`
 
