@@ -6,6 +6,7 @@ test('ccount(value, character)', function (t) {
 
   t.throws(
     function () {
+      // @ts-ignore
       ccount(true, 0)
     },
     /Expected character/,
