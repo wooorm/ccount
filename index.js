@@ -6,12 +6,12 @@
  * @return {number} Number of times `character` occurred in `value`.
  */
 export function ccount(value, character) {
-  var source = String(value)
-  var count = 0
-  var index
+  const source = String(value)
+  let count = 0
+  let index
 
   if (typeof character !== 'string') {
-    throw new Error('Expected character')
+    throw new TypeError('Expected character')
   }
 
   index = source.indexOf(character)
