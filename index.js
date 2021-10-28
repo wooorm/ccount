@@ -1,7 +1,7 @@
 /**
  * Get the total count of `character` in `value`.
  *
- * @param {any} value Content, coerced to string
+ * @param {string} value Content, coerced to string
  * @param {string} character Single character to look for
  * @return {number} Number of times `character` occurred in `value`.
  */

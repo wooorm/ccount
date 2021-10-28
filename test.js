@@ -2,11 +2,12 @@ import test from 'tape'
 import {ccount} from './index.js'
 
 test('ccount(value, character)', function (t) {
+  // @ts-expect-error: incorrect value.
   t.equal(ccount(true, 't'), 1, 'should coerce to string')
 
   t.throws(
     function () {
-      // @ts-ignore
+      // @ts-expect-error: incorrect value.
       ccount(true, 0)
     },
     /Expected character/,
