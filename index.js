@@ -1,9 +1,12 @@
 /**
- * Get the total count of `character` in `value`.
+ * Count how often a character (or substring) is used in a string.
  *
- * @param {string} value Content, coerced to string
- * @param {string} character Single character to look for
- * @return {number} Number of times `character` occurred in `value`.
+ * @param {string} value
+ *   Value to search in.
+ * @param {string} character
+ *   Character (or substring) to look for.
+ * @return {number}
+ *   Number of times `character` occurred in `value`.
  */
 export function ccount(value, character) {
   const source = String(value)

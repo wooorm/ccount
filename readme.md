@@ -5,17 +5,56 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-Count characters.
+Count how often a character (or substring) is used in a string.
+
+## Contents
+
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`ccount(value, character)`](#ccountvalue-character)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Security](#security)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [License](#license)
+
+## What is this?
+
+This package is a small utility that helps you find how frequently a substring
+occurs in another string.
+
+## When should I use this?
+
+I find this particularly useful when generating code, for example, when building
+a string that can either be double or single quoted.
+I use this utility to choose single quotes when double quotes are used more
+frequently, and double quotes otherwise.
 
 ## Install
 
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 
 ```sh
 npm install ccount
+```
+
+In Deno with [Skypack][]:
+
+```js
+import {ccount} from 'https://cdn.skypack.dev/ccount@2?dts'
+```
+
+In browsers with [Skypack][]:
+
+```html
+<script type="module">
+  import {ccount} from 'https://cdn.skypack.dev/ccount@2?min'
+</script>
 ```
 
 ## Use
@@ -29,21 +68,49 @@ ccount('foo(bar(baz)', ')') // => 1
 
 ## API
 
-This package exports the following identifiers: `ccount`.
+This package exports the following identifier: `ccount`.
 There is no default export.
 
 ### `ccount(value, character)`
 
-Get the total count of `character` in `value`.
+Count how often a character (or substring) is used in a string.
 
 ###### Parameters
 
-*   `value` (`string`) — Content, coerced to string
-*   `character` (`string`) — Single character to look for
+*   `value` (`string`)
+    — value to search in
+*   `character` (`string`)
+    — character (or substring) to look for
 
 ###### Returns
 
-`number` — Number of times `character` occurred in `value`.
+`number` — number of times `character` occurred in `value`.
+
+## Types
+
+This package is fully typed with [TypeScript][].
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+It also works in Deno and modern browsers.
+
+## Security
+
+This package is safe.
+
+## Related
+
+*   [`wooorm/longest-streak`](https://github.com/wooorm/longest-streak)
+    — count of longest repeating streak of `character` in `value`
+*   [`wooorm/direction`](https://github.com/wooorm/direction)
+    — detect directionality: left-to-right, right-to-left, or neutral
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
 
 ## License
 
@@ -69,6 +136,14 @@ Get the total count of `character` in `value`.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[skypack]: https://www.skypack.dev
+
 [license]: license
 
 [author]: https://wooorm.com
+
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
