@@ -1,26 +1,26 @@
 /**
- * Count how often a character (or substring) is used in a string.
+ * Get the count of `substring` in `value`.
  *
  * @param {string} value
- *   Value to search in.
- * @param {string} character
- *   Character (or substring) to look for.
- * @return {number}
- *   Number of times `character` occurred in `value`.
+ *   Content to search in.
+ * @param {string} substring
+ *   Substring to look for, typically one character.
+ * @returns {number}
+ *   Count of `substring`s in `value`.
  */
-export function ccount(value, character) {
+export function ccount(value, substring) {
   const source = String(value)
 
-  if (typeof character !== 'string') {
+  if (typeof substring !== 'string') {
     throw new TypeError('Expected character')
   }
 
   let count = 0
-  let index = source.indexOf(character)
+  let index = source.indexOf(substring)
 
   while (index !== -1) {
     count++
-    index = source.indexOf(character, index + character.length)
+    index = source.indexOf(substring, index + substring.length)
   }
 
   return count

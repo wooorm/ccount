@@ -5,7 +5,7 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-Count how often a character (or substring) is used in a string.
+Get the count of how often `substring` occurs in `value`.
 
 ## Contents
 
@@ -24,8 +24,7 @@ Count how often a character (or substring) is used in a string.
 
 ## What is this?
 
-This package is a small utility that helps you find how frequently a substring
-occurs in another string.
+This is a tiny package that finds the count of a substring.
 
 ## When should I use this?
 
@@ -37,7 +36,7 @@ frequently, and double quotes otherwise.
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install ccount
@@ -68,32 +67,31 @@ ccount('foo(bar(baz)', ')') // => 1
 
 ## API
 
-This package exports the following identifier: `ccount`.
+This package exports the identifier `ccount`.
 There is no default export.
 
 ### `ccount(value, character)`
 
-Count how often a character (or substring) is used in a string.
+Get the count of `substring` in `value`.
 
 ###### Parameters
 
-*   `value` (`string`)
-    — value to search in
-*   `character` (`string`)
-    — character (or substring) to look for
+*   `value` (`string`) — content to search in
+*   `substring` (`string`) — substring to look for, typically one character
 
 ###### Returns
 
-`number` — number of times `character` occurred in `value`.
+Count of `substring`s in `value` (`number`).
 
 ## Types
 
 This package is fully typed with [TypeScript][].
+It exports no additional types.
 
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
@@ -103,7 +101,7 @@ This package is safe.
 ## Related
 
 *   [`wooorm/longest-streak`](https://github.com/wooorm/longest-streak)
-    — count of longest repeating streak of `character` in `value`
+    — count the longest repeating streak of `substring`s in `value`
 *   [`wooorm/direction`](https://github.com/wooorm/direction)
     — detect directionality: left-to-right, right-to-left, or neutral
 

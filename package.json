@@ -1,7 +1,7 @@
 {
   "name": "ccount",
   "version": "2.0.1",
-  "description": "Count how often a character (or substring) is used in a string",
+  "description": "Count how often a substring occurs",
   "license": "MIT",
   "keywords": [
     "character",
