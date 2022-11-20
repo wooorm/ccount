@@ -1,11 +1,12 @@
-import test from 'tape'
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import {ccount} from './index.js'
 
-test('ccount(value, character)', function (t) {
+test('ccount(value, character)', function () {
   // @ts-expect-error: incorrect value.
-  t.equal(ccount(true, 't'), 1, 'should coerce to string')
+  assert.equal(ccount(true, 't'), 1, 'should coerce to string')
 
-  t.throws(
+  assert.throws(
     function () {
       // @ts-expect-error: incorrect value.
       ccount(true, 0)
@@ -14,14 +15,9 @@ test('ccount(value, character)', function (t) {
     'should throw when character is invalid (#1)'
   )
 
-  t.test('should work', function (st) {
-    st.equal(ccount('', 'f'), 0)
-    st.equal(ccount('foo', 'o'), 2)
-    st.equal(ccount('fo fooo fo', 'o'), 5)
-    st.equal(ccount('ooo', 'o'), 3)
-    st.equal(ccount('a🤔b🤔c', '🤔'), 2)
-    st.end()
-  })
-
-  t.end()
+  assert.equal(ccount('', 'f'), 0)
+  assert.equal(ccount('foo', 'o'), 2)
+  assert.equal(ccount('fo fooo fo', 'o'), 5)
+  assert.equal(ccount('ooo', 'o'), 3)
+  assert.equal(ccount('a🤔b🤔c', '🤔'), 2)
 })
